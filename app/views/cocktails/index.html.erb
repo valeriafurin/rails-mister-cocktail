@@ -1,2 +1,7 @@
-<h1>Cocktails#index</h1>
-<p>Find me in app/views/cocktails/index.html.erb</p>
+<h1>Cocktails</h1>
+<p>These are all the Cocktails you created:</p>
+  <ol>
+   <% @cocktails.each do |cocktail| %>
+    <li><%= cocktail.name %></li>
+  <% end %>
+  </ol>
