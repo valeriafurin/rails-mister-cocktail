@@ -1,6 +1,6 @@
 class CocktailsController < ApplicationController
   def index
-    @cocktails = Cocktail.all
+    @cocktail = Cocktail.all
   end
 
   def show
@@ -14,7 +14,7 @@ class CocktailsController < ApplicationController
   def create
     @cocktail = Cocktail.new(cocktail_params)
     @cocktail.save
-    redirect_to cocktail_path(cocktail)
+    redirect_to cocktail_path(@cocktail)
   end
 
   private
